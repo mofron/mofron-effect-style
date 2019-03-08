@@ -1,6 +1,6 @@
 /**
  * @file mofron-effect-style/index.js
- * @param style effect for mofron
+ * @param scale effect for mofron
  * @author simpart
  */
 const mf = require('mofron');
@@ -19,9 +19,9 @@ mf.effect.Style = class extends mofron.Effect {
         }
     }
     
-    contents (eid, cmp) {
+    contents (cmp) {
         try {
-            let style = this.style()[eid];
+            let style = this.style();
             if ((null === style) || (undefined === style)) {
                 return;
             }
@@ -33,19 +33,11 @@ mf.effect.Style = class extends mofron.Effect {
     }
     
     style (prm) {
-        try { return this.execConfig('style', 'object', prm); } catch (e) {
+        try { return this.member('style', 'object', prm); } catch (e) {
             console.error(e.stack);
             throw e;
         }
     }
-    
-    styleIndex (prm, idx) {
-        try { return this.execConfig('style', 'object', prm, idx); } catch (e) {
-            console.error(e.stack);
-            throw e;
-        }
-    }
-    
 }
 module.exports = mofron.effect.Style;
 /* end of file */
