@@ -3,7 +3,7 @@
 
 style effect for mofron
 
-usually, it used with 'eid' parameter, and it works with some event.
+it is possible to set style that work with some event by using 'eid' parameter.
 
 
 # Install
@@ -35,4 +35,5 @@ npm install mofron mofron-effect-style
 |:-------------:|:---------------|:-----|:------------|
 | ◯  | style | mixed | string: style contents string |
 | | | | key-value: style contents |
+| ◯  | options | key-value | style option |
 
