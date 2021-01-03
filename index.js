@@ -17,7 +17,7 @@ module.exports = class extends mofron.class.Effect {
     constructor (p1,p2) {
         try {
             super();
-            this.name('Style');
+            this.modname('Style');
 	    this.shortForm('style', 'options');
             /* init config */
             this.confmng().add("style", { type: "key-value" });
